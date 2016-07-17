@@ -1,0 +1,36 @@
+{
+    "Records": [
+        {
+            "kinesis": {
+                "kinesisSchemaVersion": "1.0",
+                "partitionKey": "url",
+                "sequenceNumber": "49563928442585369122196504736421092308305679023670820866",
+                "data": "eyJ1c2VyIjoib2ZmY291cnNlXyIsInVybCI6Imh0dHBzOi8vZ2l0aHViLmNvbS9PZmZDb3Vyc2UvY2xqcy1sYW1iZGEiLCJ0aW1lc3RhbXAiOiJUdWUgSnVsIDA1IDE0OjQ3OjMzICswMDAwIDIwMTYifQ==",
+                "approximateArrivalTimestamp": 1468791994.987
+            },
+            "eventSource": "aws:kinesis",
+            "eventVersion": "1.0",
+            "eventID": "shardId-000000000000:49563928442585369122196504736421092308305679023670820866",
+            "eventName": "aws:kinesis:record",
+            "invokeIdentityArn": "arn:aws:iam::774182433398:role/lambda_kinesis_role",
+            "awsRegion": "eu-west-1",
+            "eventSourceARN": "arn:aws:kinesis:eu-west-1:774182433398:stream/expanded-bookmarks"
+        },
+        {
+            "kinesis": {
+                "kinesisSchemaVersion": "1.0",
+                "partitionKey": "url",
+                "sequenceNumber": "49563928442585369122196504736422301234125293652845527042",
+                "data": "eyJ1c2VyIjoib2ZmY291cnNlXyIsInVybCI6Imh0dHBzOi8vZ2l0aHViLmNvbS9PZmZDb3Vyc2UvY2xqcy1ub3ciLCJ0aW1lc3RhbXAiOiJUdWUgSnVsIDA1IDE0OjQ3OjMzICswMDAwIDIwMTYifQ==",
+                "approximateArrivalTimestamp": 1468791994.99
+            },
+            "eventSource": "aws:kinesis",
+            "eventVersion": "1.0",
+            "eventID": "shardId-000000000000:49563928442585369122196504736422301234125293652845527042",
+            "eventName": "aws:kinesis:record",
+            "invokeIdentityArn": "arn:aws:iam::774182433398:role/lambda_kinesis_role",
+            "awsRegion": "eu-west-1",
+            "eventSourceARN": "arn:aws:kinesis:eu-west-1:774182433398:stream/expanded-bookmarks"
+        }
+    ]
+}
