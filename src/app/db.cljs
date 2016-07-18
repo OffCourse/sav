@@ -18,7 +18,7 @@
 
 (defn create-query [table-name item]
   {:TableName table-name
-   :Item item})
+   :Item (marshal item)})
 
 (defn -save [query]
   (let [c (chan)]

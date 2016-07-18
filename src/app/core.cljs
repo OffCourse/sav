@@ -13,10 +13,11 @@
   (if-let [{:keys [payload type]} (action/convert event)]
     (go
       (let [errors (filter :error (<! (apply db/save payload)))]
-        (logger/log "ERRORS SAVING:" errors)
         (if (empty? errors)
           (cb nil "Save Succeeded")
-          (cb "Errors Saving" nil))))
+          (do
+            (logger/log "ERRORS SAVING:" errors)
+            (cb "Errors Saving" nil)))))
     (cb "Invalid Event" nil)))
 
 (defn -main [] identity)

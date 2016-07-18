@@ -20,6 +20,9 @@
 (spec/def ::user-data (spec/keys :req-un [::user]
                                  :opt-un [::min-id]))
 
+
+(spec/def ::users-data (spec/* ::user-data))
+
 (spec/def ::bookmark (spec/keys :req-un [::url ::user ::timestamp]))
 (spec/def ::bookmarks (spec/* ::bookmark))
 (spec/def ::tweets (spec/* ::tweet))
@@ -27,11 +30,11 @@
 (spec/def ::resource (spec/keys :req-un [::url ::description ::keywords ::content ::media]))
 (spec/def ::resources (spec/* ::resource))
 
-(spec/def ::payload (spec/or :resource  ::resource
-                             :tweets    ::tweets
-                             :bookmarks ::bookmarks
-                             :resources ::resources
-                             :user-data ::user-data))
+(spec/def ::payload (spec/or :resource   ::resource
+                             :users-data ::users-data
+                             :tweets     ::tweets
+                             :bookmarks  ::bookmarks
+                             :resources  ::resources))
 
 (spec/def ::type string?)
 (spec/def ::action (spec/keys :req-un [::payload ::type]))

@@ -34,12 +34,8 @@
                 :type event-source}]
     (if (spec/valid? ::specs/action action)
       (do
-        (logger/log "Incoming: " action)
+        #_(logger/log "Incoming: " action)
         (spec/conform ::specs/action action))
       (logger/log-error :invalid-incoming-action action))))
-
-(defn create [tweets]
-  {:type "mined-tweets"
-   :payload tweets})
 
 #_(spec/instrument #'convert)
